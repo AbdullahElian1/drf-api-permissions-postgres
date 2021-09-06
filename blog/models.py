@@ -8,3 +8,6 @@ class Blog(models.Model):
     Message = models.TextField()
     description = models.TextField()
     author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
+
+    def __str__(self) -> str:
+        return self.Name
